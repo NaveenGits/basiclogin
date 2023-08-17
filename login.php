@@ -1,4 +1,16 @@
 <?php
+
+
+try {
+    $conn = new PDO("sqlsrv:server = tcp:basicloginfunction.database.windows.net,1433; Database = basicfunctiondb", "basiclogindb", "{fresh86#}");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
+}
+
+
 // Database connection settings
 $serverName = "tcp:basicloginfunction.database.windows.net,1433";
 $connectionOptions = array(
