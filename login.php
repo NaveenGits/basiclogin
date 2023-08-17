@@ -1,12 +1,16 @@
 <?php
 // Database connection settings
-$servername = "basicloginfunction.database.windows.net";
 $username = "basiclogin";
 $password = "fresh86#";
 $dbname = "basicfunctiondb";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+//$conn = new mysqli($servername, $username, $password, $dbname);
+
+$connectionInfo = array("UID" => "basiclogindb", "pwd" => "{fresh86#}", "Database" => "basicfunctiondb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+
+$serverName = "tcp:basicloginfunction.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
 
 // Check connection
 if ($conn->connect_error) {
