@@ -1,9 +1,9 @@
 <?php
 // Database connection settings
-$servername = "localhost";
-$username = "your_username";
-$password = "your_password";
-$dbname = "your_database";
+$servername = "basicloginfunction.database.windows.net";
+$username = "basiclogin";
+$password = "fresh86#";
+$dbname = "basicfunctiondb";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
