@@ -11,16 +11,10 @@ catch (PDOException $e) {
 }
 
 
-// Database connection settings
+$connectionInfo = array("UID" => "basiclogindb", "pwd" => "{your_password_here}", "Database" => "basicfunctiondb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:basicloginfunction.database.windows.net,1433";
-$connectionOptions = array(
-    "Database" => "basicfunctiondb",
-    "Uid" => "basiclogin",
-    "PWD" => "fresh86#"
-);
+$conn = sqlsrv_connect($serverName, $connectionInfo);
 
-// Establish a connection to SQL Server
-$conn = sqlsrv_connect($serverName, $connectionOptions);
 
 // Check the connection
 if ($conn === false) {
