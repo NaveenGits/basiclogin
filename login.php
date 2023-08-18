@@ -50,7 +50,7 @@ if (sqlsrv_has_rows($result)) {
     echo "Login successful!";
 } else {
     // Failed login
-    echo "Login failed. Please check your username and password.";
+    echo "Login failure. Please check your username and password.";
 }
 
 
