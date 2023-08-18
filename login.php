@@ -29,7 +29,32 @@ if ($conn === false) {
 else {
     // Failed login
     echo "Connection success.";
+
 }
+
+// Retrieve user input
+$username = $_POST['username'];
+$password = $_POST['password'];
+
+
+// Query to check user credentials
+$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+$result = sqlsrv_query($conn, $query);
+
+if ($result === false) {
+    die("Query execution failed: " . print_r(sqlsrv_errors(), true));
+}
+
+if (sqlsrv_has_rows($result)) {
+    // Successful login
+    echo "Login successful!";
+} else {
+    // Failed login
+    echo "Login failed. Please check your username and password.";
+}
+
+
+
 
 // Close the database connections
 sqlsrv_close($conn);
