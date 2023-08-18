@@ -1,5 +1,5 @@
 <?php
-
+ 
 
 try {
     $conn = new PDO("sqlsrv:server = tcp:basicloginfunction.database.windows.net,1433; Database = basicfunctiondb", "basiclogindb", "{fresh86#}");
