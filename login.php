@@ -11,7 +11,7 @@ catch (PDOException $e) {
 }
 
 
-$connectionInfo = array("UID" => "basiclogindb", "pwd" => "{your_password_here}", "Database" => "basicfunctiondb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$connectionInfo = array("UID" => "basiclogindb", "pwd" => "{fresh86#}", "Database" => "basicfunctiondb", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:basicloginfunction.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
