@@ -76,7 +76,7 @@ test:
           php -r "unlink('composer-setup.php');"
 
       - name: Run PHPUnit tests
-        run: composer install && vendor/bin/phpunit
+        run: composer install && vendor/bin/phpunit LoginTest.php
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
