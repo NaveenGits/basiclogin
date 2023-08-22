@@ -76,7 +76,7 @@ jobs:
           php -r "unlink('composer-setup.php');"
 
       - name: Run PHPUnit tests
-        run: composer install && vendor/bin/phpunit LoginTest.php
+        run: composer install && vendor/bin/phpunit tests/
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
