@@ -56,7 +56,7 @@ jobs:
           name: php-app
           path: .
 
-test:
+  test:
     runs-on: ubuntu-latest
     needs: build
 
@@ -83,7 +83,6 @@ test:
         with:
           name: php-app
           path: .
-
   deploy:
     permissions:
       contents: none
