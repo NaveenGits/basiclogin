@@ -10,8 +10,8 @@ class LoginTest extends TestCase {
 
     public function testLoginLogic() {
         // Simulate POST data
-        $_POST['username'] = 'testuser';
-        $_POST['password'] = 'testpassword';
+        $_POST['username'] = 'john';
+        $_POST['password'] = 'pwd';
 
         ob_start(); // Start capturing output
         include 'login.php'; // Include your PHP login code
